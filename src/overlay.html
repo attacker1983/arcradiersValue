@@ -3,21 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <title>ARCRaiders overlay</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <style>
       body { background: rgba(0,0,0,0); margin:0; padding:0; overflow:hidden; }
       .overlay {
-        background: rgba(10,10,10,0.6);
-        color:#fff;
-        padding:8px 12px;
-        font-family: Arial, sans-serif;
-        border-radius:6px;
+        background: linear-gradient(135deg, rgba(24, 29, 54, 0.82), rgba(36, 41, 71, 0.9));
+        color:#f8fafc;
+        padding:10px 14px;
+        font-family: "Inter", "Segoe UI", sans-serif;
+        border-radius:12px;
         display:flex;
-        gap:12px;
+        gap:10px;
         align-items:center;
+        box-shadow: 0 14px 32px rgba(0,0,0,0.28);
+        border:1px solid rgba(255,255,255,0.08);
+        backdrop-filter: blur(8px);
       }
-      .item { font-weight:700; font-size:16px; }
-      .value { font-size:16px; color:#ffd700; }
+      .item { font-weight:700; font-size:17px; letter-spacing:-0.01em; }
+      .value { font-size:17px; color:#fcd34d; }
     </style>
   </head>
   <body>
@@ -26,6 +29,6 @@
       <div class="value" id="overlayValue"></div>
     </div>
 
-    <script src="src/overlay.js"></script>
+    <script src="overlay.js"></script>
   </body>
 </html>
