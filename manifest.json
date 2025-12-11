@@ -1,0 +1,50 @@
+{
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "ARCRaiders Value Checker",
+    "version": "0.2.0",
+    "author": "attacker1983"
+  },
+  "permissions": [
+    "GameInfo",
+    "WindowManagement",
+    "Hotkeys",
+    "FileSystem",
+    "Media"
+  ],
+  "data": {
+    "start_window": "background",
+    "windows": {
+      "background": {
+        "file": "src/background.html",
+        "is_background": true
+      },
+      "popup": {
+        "file": "src/popup.html",
+        "default_width": 420,
+        "default_height": 640,
+        "resizable": true
+      },
+      "overlay": {
+        "file": "src/overlay.html",
+        "in_game": true,
+        "transparent": true,
+        "default_width": 360,
+        "default_height": 80,
+        "resizable": false
+      }
+    },
+    "icons": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    },
+    "hotkeys": {
+      "capture_item": {
+        "description": "Capture hovered item (OCR + lookup)",
+        "default": ["CTRL", "F"]
+      }
+    }
+  }
+}

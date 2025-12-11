@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Arc Raiders Value Checker</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <style>
+      .controls { display:flex; gap:8px; margin-bottom:12px; }
+      .controls button { padding:8px 10px; }
+      .actions { display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
+      #lastChecked { margin-top: 10px; font-size: 16px; }
+      .small-note { color: #666; font-size: 12px; margin-top:6px; }
+      input[type="file"] { display:none; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Arc Raiders — Value Checker</h1>
+
+      <div class="controls">
+        <button id="captureBtn">Capture (Ctrl+F)</button>
+        <button id="openOverlayBtn">Show overlay</button>
+      </div>
+
+      <div id="lastChecked" class="result">
+        <div><strong>No item checked yet</strong></div>
+      </div>
+      <div class="small-note">Press Ctrl+F while hovering an item tooltip to capture it.</div>
+
+      <div class="actions" aria-label="Database actions">
+        <button id="resetSampleBtn">Reset to sample DB</button>
+        <button id="importBtn">Import DB (JSON)</button>
+        <button id="exportBtn">Export DB</button>
+      </div>
+
+      <input id="fileInput" type="file" accept="application/json" />
+
+      <div id="status" class="status"></div>
+    </div>
+
+    <script src="src/popup.js"></script>
+  </body>
+</html>
