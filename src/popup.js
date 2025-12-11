@@ -36,7 +36,8 @@
   function showLastChecked() {
     const last = localStorage.getItem('arcr_value_last_checked');
     if (!last) {
-      resultDiv.innerHTML = `<div><strong>No item checked yet</strong></div>`;
+      resultDiv.innerHTML = `<div><strong>No item checked yet</strong></div>
+                             <div class="example">Example: <span class="item-name">Rare Circuit</span> — <span class="value-highlight">5100</span> (sample)</div>`;
       return;
     }
     try {
@@ -127,7 +128,7 @@
   });
 
   resetSampleBtn.addEventListener('click', () => {
-    fetch('src/values.json').then(r => r.json()).then(json => {
+    fetch('./values.json').then(r => r.json()).then(json => {
       saveDB(json);
       setStatus('Reset to sample DB');
     }).catch(e => {
